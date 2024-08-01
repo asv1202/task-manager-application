@@ -1,5 +1,4 @@
-// src/Home.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TaskDetailsModal from './TaskDetailsModel';
 import EditTaskModal from './EditTaskModel';
@@ -11,17 +10,21 @@ function Home() {
   const [sortOption, setSortOption] = useState('recent');
   const [selectedTask, setSelectedTask] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+  const [tasks, setTasks] = useState([]);
 
-  const initialTasks = [
-    { id: 1, title: 'Task 1', description: 'Description 1', createdAt: '01/09/2021, 05:30:00', status: 'TODO' },
-    { id: 2, title: 'Task 2', description: 'Description 2', createdAt: '01/09/2021, 05:30:00', status: 'TODO' },
-    { id: 3, title: 'Task 3', description: 'Description 3', createdAt: '01/09/2024, 05:30:00', status: 'TODO' },
-    { id: 4, title: 'Task 4', description: 'Description 4', createdAt: '01/09/2021, 05:30:00', status: 'IN PROGRESS' },
-    { id: 5, title: 'Task 5', description: 'Description 5', createdAt: '01/09/2021, 05:30:00', status: 'IN PROGRESS' },
-    { id: 6, title: 'Task 6', description: 'Description 6', createdAt: '01/09/2021, 05:30:00', status: 'DONE' }
-  ];
+  useEffect(() => {
+    fetch('http://localhost:3001/tasks', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+  }, []);
 
-  const [tasks, setTasks] = useState(initialTasks);
+
 
   const handleLogout = () => {
     console.log('Logged out');

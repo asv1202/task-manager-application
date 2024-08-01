@@ -1,0 +1,134 @@
+/* src/Home.css */
+.home-container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo i {
+    font-size: 24px;
+  }
+  
+  .nav-buttons .logout-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task-controls {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .add-task-button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-sort {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-sort input {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .search-sort select {
+    padding: 8px;
+  }
+  
+  .task-board {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .task-column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .column-title {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .task-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+/*   
+  .delete-button,
+  .edit-button,
+  .view-button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  

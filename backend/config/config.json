@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "actyv",
+    "database": "task-manager",
+    "host": "localhost",
+    "url": "postgres://postgres:actyv@localhost:5433/task-manager",
+    "dialect": "postgres"
+  }
+}
